@@ -10,7 +10,7 @@ import java.time.LocalDate
 data class Contato(
     // @PrimaryKey --> indica que o id seja chave primária. autoGenerate = true --> serve para gerar automaticamente, igual ao auto_increment.
     @PrimaryKey(autoGenerate = true)
-    var id: Int,
+    var id: Int = 0,
 
     // @ColumnInfo(name = "nome") --> serve para, aqui ficar esse nome mais específico e na tabela, o nome do campo ficar mais genérico (você escolhe).
     @ColumnInfo(name = "nome")

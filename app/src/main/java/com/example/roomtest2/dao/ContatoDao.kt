@@ -1,17 +1,17 @@
 package com.example.roomtest2.dao
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.example.roomtest2.model.Contato
 
+// Para o Room entender que ele deve executar também
+@Dao
 interface ContatoDao {
 
     // Insert no banco.
     @Insert
     fun salvar(contato: Contato)
 
+    // Para editar o contato
     @Update
     fun atualizar(contato: Contato)
 
